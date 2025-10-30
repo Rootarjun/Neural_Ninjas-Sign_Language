@@ -137,7 +137,7 @@ celerybeat.pid
 # Environments
 .env
 .venv
-env/
+signtotext_env/
 venv/
 ENV/
 env.bak/
