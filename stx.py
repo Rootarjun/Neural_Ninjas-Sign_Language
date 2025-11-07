@@ -19,4 +19,25 @@ def continuous_listen():
                 print("[Could not understand]")
             except sr.RequestError:
                 print("[API unavailable]")
-continuous_listen()
+                
+def audio_file_to_text(filepath):
+    r = sr.Recognizer()
+
+    try:
+        with sr.AudioFile(filepath) as source:
+            audio = r.record(source)   # read entire file
+        return r.recognize_google(audio)
+
+    except sr.UnknownValueError:
+        return "[Could not understand audio]"
+
+    except sr.RequestError:
+        return "[API unavailable / Internet issue]"
+
+    except FileNotFoundError:
+        return "[File not found]"
+
+    except Exception as e:
+        return f"[Error: {e}]"
+    
+print(audio_file_to_text("test_2.wav"))
