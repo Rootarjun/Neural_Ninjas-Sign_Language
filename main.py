@@ -91,7 +91,7 @@ subtitle_label.pack(pady=(0, 30))
 # Button 1: Sign to Text/Speech
 # This button will run camera_gui.py
 sign_btn = ttk.Button(main_frame, 
-                      text="Sign Language to Speech", 
+                      text="Sign Language to Text", 
                       style="Sign.TButton",
                       command=lambda: launch_script('camera_gui.py'))
 sign_btn.pack(fill="x", pady=10, ipady=10) # ipady adds internal height
