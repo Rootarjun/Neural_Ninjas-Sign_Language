@@ -7,3 +7,4 @@ seaborn
 scikit-learn
 pyttsx3
 pillow
+speech_recognition
